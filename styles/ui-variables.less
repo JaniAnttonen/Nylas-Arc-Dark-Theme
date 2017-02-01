@@ -1,41 +1,44 @@
 @arc-grey:              #404552;
 @arc-dark-grey:         #2F343F;
 @arc-light-grey:        #414857;
-@arc-border:            #272C35;
-@arc-hover:             #505766;
+@arc-border:            rgba(0,0,0,0.1);
+@arc-hover:             #898F9B;
 @arc-select:            #5294E2;
 @arc-select-unfocused:  #4877B1;
 @white:                 #FFFFFF;
 
 ///PANEL
-@panel-background-color:         #353945;
+@panel-background-color:         #3E424D;
 @source-list-bg:                 @panel-background-color;
 @source-list-active-bg:          @panel-background-color;
 @source-list-active-color:       @arc-select;
+@source-list-color: @white;
 
 /// MENU
-@menu-divider-color: @arc-dark-grey;
+@menu-divider-color: @white;
 @menu-item-color-hover: @arc-light-grey;
 @menu-item-color-selected: @arc-select;
 @menu-text-color-selected: @white;
 
 ///BACKGROUND FONT MESSAGES
-@background-primary:     @arc-grey;
-@background-off-primary: @arc-grey;
+@background-primary:     @white;
+@background-off-primary: @white;
 
 ///BACKGROUND MESSAGES AND TOOLBAR
-@background-secondary:   @arc-dark-grey;
-@background-tertiary:    @arc-dark-grey;
+@background-secondary:   @white;
+@background-tertiary:    @white;
 
 ///BORDERS
-@list-border:            @arc-border;
+@list-bg:                  @white;
+@list-border:              #ddd;
+@list-hover-bg:            darken(@list-bg, 4%);
 @border-color-primary:   @arc-border;
 @border-color-secondary: @arc-border;
 @border-color-tertiary:  @arc-border;
-@border-color-divider:   @arc-border;
+@border-color-divider:   @arc-light-grey;
 
 ///TEXT COLORS
-@text-color:         @white;
+@text-color:         @arc-dark-grey;
 @text-color-inverse: @white;
 @text-color-alert:  #E64D65;
 @text-color-heading: @white;
@@ -151,9 +154,17 @@ body {
     background-color: rgb(213, 214, 216) !important;
 }
 .item-container {
-    input {
-     background-color: @arc-grey;
-   }
+  input {
+    background-color: @arc-grey;
+  }
 }
   
+.nylas-outline-view .item {
+    color: @white !important;
+  }
+
+.nylas-outline-view .heading {
+  color: #FFFFFF !important;
+}
+
 @import 'preferences';
